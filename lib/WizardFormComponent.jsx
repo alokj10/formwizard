@@ -39,7 +39,7 @@ export class WizardFormComponent extends React.Component{
         }
         let selected = 'selected';
         return(
-            <div className="">
+            <div className="wizard">
                 <div className="panel-body">
                     {form_htm}
                 </div>

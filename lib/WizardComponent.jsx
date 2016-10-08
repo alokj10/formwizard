@@ -47,15 +47,20 @@ export class WizardComponent extends React.Component{
 
     render(){
         return (
-            <div className="wizard" key={this.state.step}>
-                <WizardHeaderComponent 
+            <div className="" key={this.state.step}>
+                <div className="col-md-12">
+                    <WizardHeaderComponent 
+                                            currentStep={this.state.step}
+                                            forms_list={this.forms_list}/>
+                </div>
+                <br></br>
+                <div className="col-md-12">
+                    <WizardFormComponent
                                         currentStep={this.state.step}
-                                        forms_list={this.forms_list}/>
-                <WizardFormComponent
-                                    currentStep={this.state.step}
-                                    onNext={this.onNext}
-                                    onPrevious={this.onPrevious}
-                                    so_form={this.forms_list[this.state.step]} />
+                                        onNext={this.onNext}
+                                        onPrevious={this.onPrevious}
+                                        so_form={this.forms_list[this.state.step]} />
+                </div>
             </div>
         );
     }

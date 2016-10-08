@@ -19,9 +19,9 @@ export class WizardHeaderComponent extends React.Component{
         let ctl = [];
         for(var j=0; j<forms_list.length; j++){
             ctl.push(
-                        <li role="presentation" className={forms_list[j].selected ? 'active' : ''}>
-                            <a data-toggle="tab">
-                                <span className="round-tab">
+                        <li className={forms_list[j].selected ? 'col-md-3 tab-head selected' : 'col-md-3 tab-head'}>
+                            <a>
+                                <span className="">
                                     {forms_list[j].header}
                                 </span>
                             </a>
@@ -32,11 +32,8 @@ export class WizardHeaderComponent extends React.Component{
         
         return(
             <div className="wizard-header">
-                <div className="connecting-line"></div>
-                    <ul className="nav nav-tabs" role="tablist">
                         {ctl}
-                    </ul>
-                </div>
+            </div>
         );
     }
 }

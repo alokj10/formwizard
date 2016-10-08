@@ -1,6 +1,6 @@
 {
   "name": "formwizard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "formwizard",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,6 @@
     "build": "webpack -p",
     "rename-css-bower-dependencies": "find bower_components -name '*.css' | sed -e 'p;s/.css$/.scss/' | xargs -n2 mv",
     "start": "webpack-dev-server --inline --hot",
-    "postinstall": "bower install",
     "prepublish": "npm run build"
   },
   "author": "",
